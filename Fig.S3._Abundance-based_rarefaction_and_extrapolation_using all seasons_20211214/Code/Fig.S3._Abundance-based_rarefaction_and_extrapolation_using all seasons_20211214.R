@@ -632,7 +632,7 @@ save(pd.abun,file="pd.abun_mito_whole_20211125")
 #plot the results of Abundance-based rarefaction and extrapolation using all seasons 
 ##################
 
-cols <- c("#1d953f","#1d953f","#1d953f","black","black","black","#8a5656","#8a5656","#8a5656","#896a45","#896a45")
+#cols <- c("#1d953f","#1d953f","#1d953f","black","black","black","#8a5656","#8a5656","#8a5656","#896a45","#896a45")
 
 load("Data/pd.otu_whole_20211214")
 #p.loss.abun.whole<-ggiNEXT3D(otu.abun.whole, type=1, facet.var = "Order.q", color.var ="None")[[1]]+scale_shape_manual(name="Experimental",values=c(1,19,0,0,1,19,2,10,13,7,12),breaks = c("North Summer Loss","South Summer Loss","Summer Loss","Winter Loss","North Winter Loss","South Winter Loss","Whole Dataset","1400 Loss","1800 Loss","South Loss","North Loss"))+scale_colour_manual(name="Experimental",values = alpha(cols,0.5), aesthetics = c("colour", "fill"),breaks = c("North Summer Loss","South Summer Loss","Summer Loss","Winter Loss","North Winter Loss","South Winter Loss","Whole Dataset","1400 Loss","1800 Loss","South Loss","North Loss"))+theme(plot.title = element_text(hjust = 0.5))+theme_bw()

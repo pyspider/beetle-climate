@@ -4,7 +4,7 @@
 library(ggplot2)
 library(dplyr) #‘dplyr’ version 1.0.2
 library(patchwork)
-setwd("C:/Users/LZX/Desktop/Ratio_loss_set_20211214/")
+setwd(HERE)
 
 #calculate the proportional decreases in Species richness/Shannon/Simpson and Faith's PD/Phylogenetic entropy/Rao’s quadratic entropy for OTU table, de novo tree, and placement tree
 ##################

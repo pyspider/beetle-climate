@@ -661,17 +661,17 @@ p2.otu.inci<-ggplot(filter(otu.inci,otu.inci$Method!="Extrapolation"), aes(x=nt,
         text=element_text(size=18),
         legend.box = "vertical")+scale_shape_manual(name="Experimental",values=c(1,19,0,0,1,19,2,10,13,7,12),breaks = c("North Summer Loss","South Summer Loss","Summer Loss","Winter Loss","North Winter Loss","South Winter Loss","Whole Dataset","1400 Loss","1800 Loss","South Loss","North Loss"))+scale_colour_manual(name="Experimental",values = alpha(cols,0.5), aesthetics = c("colour", "fill"),breaks = c("North Summer Loss","South Summer Loss","Summer Loss","Winter Loss","North Winter Loss","South Winter Loss","Whole Dataset","1400 Loss","1800 Loss","South Loss","North Loss"))+theme(plot.title = element_text(hjust = 0.5))+theme_bw()
 
-p.otu.inci  <- (p0.otu.inci+labs(x="Number of individuals", y="Species Diversity",title = "Species richness\n")+
+p.otu.inci  <- (p0.otu.inci+labs(x="Number of sampling units", y="Species Diversity",title = "Species richness\n")+
              theme(axis.line = element_line(colour = "black"),
                    panel.grid.major = element_blank(),
                    panel.grid.minor = element_blank(),
                    panel.border = element_blank(),
-                   panel.background = element_blank())+theme(plot.title = element_text(size=16)))+(p1.otu.inci+scale_y_continuous(limits = c(0,2200))+labs(x="Number of individuals", y="Species Diversity",title = "Shannon diversity\n")+
+                   panel.background = element_blank())+theme(plot.title = element_text(size=16)))+(p1.otu.inci+scale_y_continuous(limits = c(0,2200))+labs(x="Number of sampling units", y="Species Diversity",title = "Shannon diversity\n")+
                                                                                                      theme(axis.line = element_line(colour = "black"),
                                                                                                            panel.grid.major = element_blank(),
                                                                                                            panel.grid.minor = element_blank(),
                                                                                                            panel.border = element_blank(),
-                                                                                                           panel.background = element_blank()))+theme(plot.title = element_text(size=16))+(p2.otu.inci+scale_y_continuous(limits = c(0,2200))+labs(x="Number of individuals", y="Species Diversity",title = "Simpson diversity\n"))+
+                                                                                                           panel.background = element_blank()))+theme(plot.title = element_text(size=16))+(p2.otu.inci+scale_y_continuous(limits = c(0,2200))+labs(x="Number of sampling units", y="Species Diversity",title = "Simpson diversity\n"))+
   theme(axis.line = element_line(colour = "black"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -733,17 +733,17 @@ p2.denovo.inci<-ggplot(filter(pd.inci.denovo,pd.inci.denovo$Method!="Extrapolati
         text=element_text(size=18),
         legend.box = "vertical")+scale_shape_manual(name="Experimental",values=c(1,19,0,0,1,19,2,10,13,7,12),breaks = c("North Summer Loss","South Summer Loss","Summer Loss","Winter Loss","North Winter Loss","South Winter Loss","Whole Dataset","1400 Loss","1800 Loss","South Loss","North Loss"))+scale_colour_manual(name="Experimental",values = alpha(cols,0.5), aesthetics = c("colour", "fill"),breaks = c("North Summer Loss","South Summer Loss","Summer Loss","Winter Loss","North Winter Loss","South Winter Loss","Whole Dataset","1400 Loss","1800 Loss","South Loss","North Loss"))+theme(plot.title = element_text(hjust = 0.5))+theme_bw()+theme(legend.position = "none")
 
-p.denovo.inci <- (p0.denovo.inci+labs(x="Number of individuals", y="Phylogenetic Diversity",title = "Faith’s PD\nReference time = 307.87 Ma")+
+p.denovo.inci <- (p0.denovo.inci+labs(x="Number of sampling units", y="Phylogenetic Diversity",title = "Faith’s PD\nReference time = 307.87 Ma")+
                theme(axis.line = element_line(colour = "black"),
                      panel.grid.major = element_blank(),
                      panel.grid.minor = element_blank(),
                      panel.border = element_blank(),
-                     panel.background = element_blank())+theme(plot.title = element_text(size=16)))+(p1.denovo.inci+scale_y_continuous(limits = c(307,3400))+labs(x="Number of individuals", y="Phylogenetic Diversity",title = "Phylogenetic entropy\nReference time = 307.87 Ma")+
+                     panel.background = element_blank())+theme(plot.title = element_text(size=16)))+(p1.denovo.inci+scale_y_continuous(limits = c(307,3400))+labs(x="Number of sampling units", y="Phylogenetic Diversity",title = "Phylogenetic entropy\nReference time = 307.87 Ma")+
                                                                                                        theme(axis.line = element_line(colour = "black"),
                                                                                                              panel.grid.major = element_blank(),
                                                                                                              panel.grid.minor = element_blank(),
                                                                                                              panel.border = element_blank(),
-                                                                                                             panel.background = element_blank())+theme(plot.title = element_text(size=16)))+(p2.denovo.inci+scale_y_continuous(limits = c(307,3400))+labs(x="Number of individuals", y="Phylogenetic Diversity",title = "Rao’s quadratic entropy\nReference time = 307.87 Ma")+
+                                                                                                             panel.background = element_blank())+theme(plot.title = element_text(size=16)))+(p2.denovo.inci+scale_y_continuous(limits = c(307,3400))+labs(x="Number of sampling units", y="Phylogenetic Diversity",title = "Rao’s quadratic entropy\nReference time = 307.87 Ma")+
                                                                                                                                                                                                theme(axis.line = element_line(colour = "black"),
                                                                                                                                                                                                      panel.grid.major = element_blank(),
                                                                                                                                                                                                      panel.grid.minor = element_blank(),
@@ -805,17 +805,17 @@ p2.mito.inci<-ggplot(filter(pd.inci.mito,pd.inci.mito$Method!="Extrapolation"), 
         text=element_text(size=18),
         legend.box = "vertical")+scale_linetype_discrete(name="",breaks=c("1","2"),labels=c("Rarefaction","Extrapolation"))+scale_shape_manual(name="Legend",values=c(1,19,0,0,1,19,2,10,13,7,12),breaks = c("North Summer Loss","South Summer Loss","Summer Loss","Winter Loss","North Winter Loss","South Winter Loss","Whole Dataset","1400 Loss","1800 Loss","South Loss","North Loss"),labels = c("– Summer_North","– Summer_South","– Summer","– Winter","– Winter_North","– Winter_South","    Whole dataset","– 1400 m","– 1800 m","– South","– North"))+scale_colour_manual(name="Legend",values = alpha(cols,0.5), aesthetics = c("colour", "fill"),breaks = c("North Summer Loss","South Summer Loss","Summer Loss","Winter Loss","North Winter Loss","South Winter Loss","Whole Dataset","1400 Loss","1800 Loss","South Loss","North Loss"),labels = c("– Summer_North","– Summer_South","– Summer","– Winter","– Winter_North","– Winter_South","    Whole dataset","– 1400 m","– 1800 m","– South","– North"))+theme(plot.title = element_text(hjust = 0.5))+theme_bw()
 
-p.mito.inci <- (p0.mito.inci+labs(x="Number of individuals", y="Phylogenetic Diversity",title = "Faith’s PD\nReference time = 383.99 Ma")+
+p.mito.inci <- (p0.mito.inci+labs(x="Number of sampling units", y="Phylogenetic Diversity",title = "Faith’s PD\nReference time = 383.99 Ma")+
              theme(axis.line = element_line(colour = "black"),
                    panel.grid.major = element_blank(),
                    panel.grid.minor = element_blank(),
                    panel.border = element_blank(),
-                   panel.background = element_blank())+theme(plot.title = element_text(size=16)))+(p1.mito.inci+scale_y_continuous(limits = c(383,32000))+labs(x="Number of individuals", y="Phylogenetic Diversity",title = "Phylogenetic entropy\nReference time = 383.99 Ma")+
+                   panel.background = element_blank())+theme(plot.title = element_text(size=16)))+(p1.mito.inci+scale_y_continuous(limits = c(383,32000))+labs(x="Number of sampling units", y="Phylogenetic Diversity",title = "Phylogenetic entropy\nReference time = 383.99 Ma")+
                                                                                                      theme(axis.line = element_line(colour = "black"),
                                                                                                            panel.grid.major = element_blank(),
                                                                                                            panel.grid.minor = element_blank(),
                                                                                                            panel.border = element_blank(),
-                                                                                                           panel.background = element_blank()))+theme(plot.title = element_text(size=16))+(p2.mito.inci+scale_y_continuous(limits = c(383,32000))+labs(x="Number of individuals", y="Phylogenetic Diversity",title = "Rao’s quadratic entropy\nReference time = 383.99 Ma"))+
+                                                                                                           panel.background = element_blank()))+theme(plot.title = element_text(size=16))+(p2.mito.inci+scale_y_continuous(limits = c(383,32000))+labs(x="Number of sampling units", y="Phylogenetic Diversity",title = "Rao’s quadratic entropy\nReference time = 383.99 Ma"))+
   theme(axis.line = element_line(colour = "black"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),

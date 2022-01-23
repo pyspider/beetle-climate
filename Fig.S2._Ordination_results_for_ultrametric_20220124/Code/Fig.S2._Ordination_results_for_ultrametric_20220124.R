@@ -488,5 +488,5 @@ ggdraw() + draw_plot(OTU_NMDS_1400m, x = 0, y = .66, width = 0.5, height = .33) 
   draw_plot(OTU_NMDS_1800m, x = 0.5, y = .66, width = 0.5, height = .33) +
   draw_plot(Unifrac_NMDS_1800m, x = 0.5, y = .33, width = 0.5, height = .33) +
   draw_plot(Placement_NMDS_1800m, x = 0.5, y = .0, width = 0.5, height = .33)
-ggsave("figS2_NMDS_non_ultrametric_20220124.pdf", width = 22, height = 20, units = "cm")
+ggsave("figS2_NMDS_ultrametric_20220124.pdf", width = 22, height = 20, units = "cm")
 dev.off()

@@ -540,7 +540,7 @@ Placement_NMDS_1400m <- ggplot(Placement_NMDS,aes(x=NMDS1, y=NMDS2))+
         panel.grid.minor = element_blank(),
         panel.border = element_blank(),
         panel.background = element_blank())+
-  labs(title = paste("Unifrac on mitogenome tree (1400m)"))+annotate("text",x=-0.45,y=-0.2,label=paste('Stress =', round(EPA_no_heur_whole_biweek.nmds2$stress, 4)),size=3)+theme(legend.position = "none")
+  labs(title = paste("Unifrac on placement tree (1400m)"))+annotate("text",x=-0.45,y=-0.2,label=paste('Stress =', round(EPA_no_heur_whole_biweek.nmds2$stress, 4)),size=3)+theme(legend.position = "none")
 
 Placement_NMDS_1400m
 
@@ -553,7 +553,7 @@ Placement_NMDS_1800m <- ggplot(Placement_NMDS,aes(x=NMDS1, y=NMDS2))+
         panel.grid.minor = element_blank(),
         panel.border = element_blank(),
         panel.background = element_blank())+
-  labs(title = paste("Unifrac on mitogenome tree (1800m)"))+annotate("text",x=-0.28,y=-0.24,label=paste('Stress =', round(EPA_no_heur_whole_biweek.nmds2$stress, 4)),size=3)+
+  labs(title = paste("Unifrac on placement tree (1800m)"))+annotate("text",x=-0.28,y=-0.24,label=paste('Stress =', round(EPA_no_heur_whole_biweek.nmds2$stress, 4)),size=3)+
   theme(legend.position = "none")
 
 Placement_NMDS_1800m
@@ -579,7 +579,7 @@ Placement_NMDS_1400m_seasons<- ggplot(Placement_NMDS,aes(x=NMDS1, y=NMDS2))+
         panel.grid.minor = element_blank(),
         panel.border = element_blank(),
         panel.background = element_blank())+
-  labs(title = paste("Unifrac on mitogenome tree (1400m)"))+annotate("text",x=-0.45,y=-0.2,label=paste('Stress =', round(EPA_no_heur_whole_biweek.nmds2$stress, 4)),size=3)+ theme(legend.position = "none")
+  labs(title = paste("Unifrac on placement tree (1400m)"))+annotate("text",x=-0.45,y=-0.2,label=paste('Stress =', round(EPA_no_heur_whole_biweek.nmds2$stress, 4)),size=3)+ theme(legend.position = "none")
 
 Placement_NMDS_1400m_seasons
 
@@ -592,7 +592,7 @@ Placement_NMDS_1800m_seasons <- ggplot(Placement_NMDS,aes(x=NMDS1, y=NMDS2))+
         panel.grid.minor = element_blank(),
         panel.border = element_blank(),
         panel.background = element_blank())+
-  labs(title = paste("Unifrac on mitogenome tree (1800m)"))+annotate("text",x=-0.28,y=-0.24,label=paste('Stress =', round(EPA_no_heur_whole_biweek.nmds2$stress, 4)),size=3)+
+  labs(title = paste("Unifrac on placement tree (1800m)"))+annotate("text",x=-0.28,y=-0.24,label=paste('Stress =', round(EPA_no_heur_whole_biweek.nmds2$stress, 4)),size=3)+
   theme(legend.position = "none")# +  coord_cartesian(xlim=c(-0.25,-0.175),ylim=c(0.125,0.2)) 
 Placement_NMDS_1800m_seasons
 
@@ -611,7 +611,7 @@ ggdraw() + draw_plot(OTU_NMDS_1400m_seasons, x = 0, y = .66, width = 0.5, height
   draw_plot(Unifrac_NMDS_1400m_seasons, x = 0, y = .33, width = 0.5, height = .33) +
   draw_plot(Placement_NMDS_1400m_seasons, x = 0, y = .0, width = 0.5, height = .33)+
   draw_plot(OTU_NMDS_1800m_seasons, x = 0.5, y = .66, width = 0.5, height = .33) +
-  draw_plot(Unifrac_NMDS_1400m_seasons, x = 0.5, y = .33, width = 0.5, height = .33) +
+  draw_plot(Unifrac_NMDS_1800m_seasons, x = 0.5, y = .33, width = 0.5, height = .33) +
   draw_plot(Placement_NMDS_1800m_seasons, x = 0.5, y = .0, width = 0.5, height = .33)
 ggsave("figS4_NMDS_non_ultrametric_20220124.pdf", width = 22, height = 20, units = "cm")
 dev.off()

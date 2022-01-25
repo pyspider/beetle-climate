@@ -465,7 +465,7 @@ Placement_NMDS_1400m <- ggplot(Placement_NMDS,aes(x=NMDS1, y=NMDS2))+
         panel.grid.minor = element_blank(),
         panel.border = element_blank(),
         panel.background = element_blank())+
-  labs(title = paste("Unifrac on mitogenome tree (1400m)"))+annotate("text",x=-0.226,y=-0.45,label=paste('Stress =', round(EPA_no_heur_whole_biweek.nmds2$stress, 4)),size=3)+theme(legend.position = "none")
+  labs(title = paste("Unifrac on placement tree (1400m)"))+annotate("text",x=-0.226,y=-0.45,label=paste('Stress =', round(EPA_no_heur_whole_biweek.nmds2$stress, 4)),size=3)+theme(legend.position = "none")
 Placement_NMDS_1400m
 
 Placement_NMDS_1800m <- ggplot(Placement_NMDS,aes(x=NMDS1, y=NMDS2))+
@@ -477,7 +477,7 @@ Placement_NMDS_1800m <- ggplot(Placement_NMDS,aes(x=NMDS1, y=NMDS2))+
         panel.grid.minor = element_blank(),
         panel.border = element_blank(),
         panel.background = element_blank())+
-  labs(title = paste("Unifrac on mitogenome tree (1800m)"))+annotate("text",x=-0.27,y=-0.33,label=paste('Stress =', round(EPA_no_heur_whole_biweek.nmds2$stress, 4)),size=3)+
+  labs(title = paste("Unifrac on placement tree (1800m)"))+annotate("text",x=-0.27,y=-0.33,label=paste('Stress =', round(EPA_no_heur_whole_biweek.nmds2$stress, 4)),size=3)+
   theme(legend.position = "none")
 Placement_NMDS_1800m 
 
